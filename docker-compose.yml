@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  liveme_refine:
+    build:
+      context: ./liveme_refine
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    restart: on-failure
+
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
